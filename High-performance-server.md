@@ -11,13 +11,15 @@ To make it highly available, we need to create multiple nodes of our server and 
 
 ## Highly Concurrent
 For high concurrency there are lot of things that can be done, some of them are as follow:
+
 1. All API calls must be non-blocking, which means thread should not get blocked for delayed tasks. For e.g.: writing content to file and I/O. Use future and promise for achieving it.
 2. Logic should be completely stateless and must not depend on some other API calls, if we need to maintain some state for a particular resource that should be done in a separate layer.
 3. Have asynchronous behaviour wherever possible, like checking for duplicate data can be done asynchronously for every object.
 4. Event driven model - If some task is triggered on fulfilment of some condition, avoid polling after specific interval to check for condition and then trigger task, implement event driven logic which triggers task on occurrence of event and uses call back to inform the completion or error in task.
 
 ## Higly Efficient
-For minimising processing time 
+For minimising processing time: 
+
 1. we can cache the data which is required very frequently. This can be done on separate layer by using some persistent in-memory database like reds.
 2. Use better data-structures to reduce the time complexity for lookups and finding out relationships
 3. Using efficient algorithm for matching content in memory with a file, by diving content in chunks and then process in parallel to find similarity.
