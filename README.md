@@ -19,7 +19,7 @@ It is implemented over reliable file system for storing data on disk.
 3. While deleting object for an id. If Object is not synced with disk then object's reference from lookup table is removed and object is also removed, else check the file pointed by this object. If that file is pointed by only this object remove file and object reference from lookup table. If file is pointed by other objects, remove that mapping and remove object refernce from lookup table.
 
 ### Object Data model
-![alt tag](http://url/to/img.png)
+![alt tag](https://raw.githubusercontent.com/goelhimanshu/DeDuplicate-Object-Store/master/public/images/Screen%20Shot%202015-05-15%20at%203.14.40%20pm.png)
 
 # Technology & Framework used
 This is implemented in Play framework V2.1.4 over Java OpenJDK V1.7 
