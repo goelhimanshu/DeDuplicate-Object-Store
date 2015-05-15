@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# De duplicate store
+GET			/store								controllers.Store.index()
+PUT			/store								controllers.Store.update()
+GET			/store/:id							controllers.Store.read(id: Long)
+DELETE		/store/:id							controllers.Store.delete(id: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
